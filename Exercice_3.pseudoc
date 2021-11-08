@@ -1,0 +1,16 @@
+/****************************************** EXERCICE 3 *******************************************/
+
+ALGORITHME exercice3
+VARIABLE
+    score : ENTIER
+DÉBUT
+    score → 0
+    droite
+    avancer
+    score → score + 10
+    gauche
+    avancer
+    score → score + 10
+    gauche
+    avancer
+FIN
