@@ -1,0 +1,66 @@
+/****************************************** EXERCICE 9 *******************************************/
+
+/*********** Sans boucle ***********/
+
+ALGORITHME exercice9
+VARIABLE
+    score : ENTIER
+DÉBUT
+    score → 0
+    avancer
+    score → score + 10
+    avancer
+    score → score + 10
+    droite
+    avancer
+    score → score + 10
+    droite
+    avancer
+    score → score - 5
+    avancer
+FIN
+
+/*********** Avec boucle ***********/
+
+ALGORITHME exercice9
+VARIABLE
+    score : ENTIER
+DÉBUT
+    score → 0
+    POUR cpt ALLANT DE 1 À 2 PAR PAS DE 1 FAIRE
+        avancer
+        score → score + 10
+    FINPOUR
+    droite
+    avancer
+    score → score + 10
+    droite
+    avancer
+    score → score - 5
+    avancer
+FIN
+
+/*********** Avec boucle & test ***********/
+
+ALGORITHME exercice9
+VARIABLE
+    score : ENTIER
+DÉBUT
+    score → 0
+    POUR cpt ALLANT DE 1 À 2 PAR PAS DE 1 FAIRE
+        avancer
+        score → score + 10
+    FINPOUR
+    POUR cpt ALLANT DE 1 À 2 PAR PAS DE 1 FAIRE
+        droite
+        avancer
+        SI mangerPomme ALORS
+            score → score + 10
+        SINON
+            SI marcherSurPiques ALORS
+                score → score - 5
+            FINSI
+        FINSI
+    FINPOUR
+    avancer
+FIN
