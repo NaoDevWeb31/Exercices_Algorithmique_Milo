@@ -1,0 +1,45 @@
+/****************************************** EXERCICE 25 *******************************************/
+
+FONCTION gererTaille(taille)
+VARIABLE
+    localTaille : ENTIER
+DÉBUT
+    localTaille → taille
+    
+    SI (localTaille <= 2) ALORS
+        localTaille → localTaille + 1
+    SINON
+        AFFICHER "taille MAX"
+    FINSI
+
+    RETOURNER localTaille
+FIN
+
+FONCTION ligneDroite(taille)
+VARIABLE
+    localTaille : ENTIER
+DÉBUT
+    localTaille → taille
+    
+    POUR cpt ALLANT DE 1 À 2 PAR PAS DE 1 FAIRE
+        avancer
+        SI (toucheTete) ALORS
+            localTaille → gererTaille(localTaille)
+        FINSI
+    FINPOUR
+
+    RETOURNER localTaille
+FIN
+
+ALGORITHME exercice25
+VARIABLE
+    taille : ENTIER
+DÉBUT
+    taille → 1
+    
+    taille → ligneDroite(taille)
+
+    gauche
+
+    taille → ligneDroite(taille)
+FIN
