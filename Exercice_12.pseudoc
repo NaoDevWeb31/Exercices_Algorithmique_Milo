@@ -1,0 +1,25 @@
+/****************************************** EXERCICE 12 *******************************************/
+
+ALGORITHME exercice12
+VARIABLES
+    msg : CHAINE DE CARACTERE
+    score : ENTIER
+DÉBUT
+    msg → ""
+    score → 0
+    avancer
+    msg → msg + "C"
+    AFFICHER msg
+    droite
+    avancer
+    score → score + 10
+    AFFICHER "J'ai ", score, " points"
+    droite
+    avancer
+    msg → msg + "C"
+    AFFICHER msg
+    gauche
+    avancer
+    AFFICHER "Score : ", score, " points"
+    AFFICHER "Message : ", msg
+FIN
