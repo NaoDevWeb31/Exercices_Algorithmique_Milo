@@ -1,0 +1,24 @@
+/****************************************** EXERCICE 6 *******************************************/
+
+ALGORITHME exercice6
+VARIABLE
+    score : ENTIER
+DÉBUT
+    score → 20
+    avancer
+    score → score + 10
+    gauche
+    avancer
+    score → score - 5
+    droite
+    avancer
+    score → score + 10
+    droite
+    avancer
+    score → score - 5
+    gauche
+    avancer
+    score → score + 10
+    droite
+    avancer
+FIN
