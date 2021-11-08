@@ -1,0 +1,70 @@
+/****************************************** EXERCICE 18 *******************************************/
+
+/*********** Avec test & fonction ***********/
+
+FONCTION gererPv(vie)
+DÉBUT
+    SI marcherSurCoeur ALORS
+        SI (vie < 3)
+            RETOURNER vie + 1
+        SINON
+            AFFICHER "pv MAX atteint"
+            RETOURNER vie
+        FINSI
+    SINON
+        SI marcherSurPiques ALORS
+            RETOURNER vie - 1
+        SINON
+            RETOURNER vie
+        FINSI
+    FINSI
+FIN
+
+ALGORITHME exercice18
+VARIABLES
+    pv : ENTIER
+DÉBUT
+    pv → 1
+    avancer
+    pv → gererPv(pv)
+    droite
+    avancer
+    pv → gererPv(pv)
+    gauche
+
+    avancer
+    pv → gererPv(pv)
+    droite
+    avancer
+    pv → gererPv(vie)
+    gauche
+
+    avancer
+    pv → gererPv(pv)
+    droite
+    avancer
+    gauche
+
+    avancer
+    pv → gererPv(pv)
+    droite
+    avancer
+    gauche
+FIN
+
+/*********** Avec boucle, test & fonction ***********/
+
+ALGORITHME exercice18
+VARIABLES
+    pv : ENTIER
+DÉBUT
+    pv → 1
+    POUR cpt ALLANT DE 1 À 4 PAR PAS DE 1 FAIRE
+        avancer
+        pv → gererPv(pv)
+        droite
+        avancer
+        pv → gererPv(pv)
+        gauche
+    FINPOUR
+FIN
