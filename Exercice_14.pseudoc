@@ -1,0 +1,22 @@
+/****************************************** EXERCICE 14 *******************************************/
+
+ALGORITHME exercice14
+VARIABLES
+    msg : CHAINE DE CARACTERE
+    score : ENTIER
+DÉBUT
+    msg → ""
+    score → 0
+    POUR cpt ALLANT DE 1 À 4 PAR PAS DE 1 FAIRE
+        avancer
+        SI ramasserLettre ALORS
+            msg → msg + "C"
+            AFFICHER msg
+        FINSI
+        SI mangerPomme ALORS
+            score → score + 10
+        FINSI
+    FINPOUR
+    AFFICHER "Score : ", score, " points"
+    AFFICHER "Message : ", msg
+FIN
