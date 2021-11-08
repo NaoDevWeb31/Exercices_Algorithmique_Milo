@@ -1,0 +1,22 @@
+/****************************************** EXERCICE 24 *******************************************/
+
+ALGORITHME exercice24
+VARIABLE
+    petit : BOOLEEN
+DÉBUT
+    petit → VRAI
+    
+    POUR cpt ALLANT DE 1 À 2 PAR PAS DE 1 FAIRE
+        avancer
+        SI (toucheTete) ALORS
+            SI (petit)
+                petit → FAUX
+            SINON
+                AFFICHER "taille MAX"
+            FINSI
+        FINSI
+        droite
+        avancer
+        gauche
+    FINPOUR
+FIN
