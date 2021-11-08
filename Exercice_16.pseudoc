@@ -1,0 +1,26 @@
+/****************************************** EXERCICE 16 *******************************************/
+
+ALGORITHME exercice16
+VARIABLES
+    pv : ENTIER
+    score : ENTIER
+DÉBUT
+    pv → 1
+    score → 0
+    avancer
+    score → score + 10
+    gauche
+    avancer
+    score → score + 10
+    pv → pv + 1
+    gauche
+    avancer
+    score → score - 5
+    pv → pv - 1
+    droite
+    avancer
+    pv → pv + 1
+    droite
+    avancer
+    AFFICHER "Mes PV sont de ", pv, " et mon score est de ", score
+FIN
