@@ -1,0 +1,32 @@
+/****************************************** EXERCICE 15 *******************************************/
+
+FONCTION ramasserLettre(message, lettre)
+VARIABLE
+    localMsg : CHAINE DE CARACTERE
+DÉBUT
+    localMsg → message + lettre
+    AFFICHER localMsg
+    RETOURNER localMsg
+FIN
+
+ALGORITHME exercice15
+VARIABLE
+    msg : CHAINE DE CARACTERE
+DÉBUT
+    msg → ""
+    avancer
+    msg → ramasserLettre(msg, "S")
+    droite
+    avancer
+    msg → ramasserLettre(msg, "A")
+    gauche
+    avancer
+    msg → ramasserLettre(msg, "L")
+    gauche
+    avancer
+    msg → ramasserLettre(msg, "U")
+    avancer
+    msg → ramasserLettre(msg, "T")
+    avancer
+    AFFICHER msg
+FIN
