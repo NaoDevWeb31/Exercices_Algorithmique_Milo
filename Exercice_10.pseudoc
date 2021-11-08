@@ -1,0 +1,87 @@
+/****************************************** EXERCICE 10 *******************************************/
+
+/*********** Sans boucle ***********/
+
+ALGORITHME exercice10
+VARIABLE
+    score : ENTIER
+DÉBUT
+    score → 15
+    avancer
+    score → score + 10
+    avancer
+    score → score - 5
+    avancer
+    score → score + 10
+    droite
+    avancer
+    score → score + 10
+    droite
+    avancer
+    score → score + 10
+    avancer
+    score → score - 5
+    avancer
+FIN
+
+/*********** Avec boucle & test ***********/
+
+ALGORITHME exercice10
+VARIABLE
+    score : ENTIER
+DÉBUT
+    score → 15
+    POUR cpt ALLANT DE 1 À 3 PAR PAS DE 1 FAIRE
+        avancer
+        SI mangerPomme ALORS
+            score → score + 10
+        SINON
+            SI marcherSurPiques ALORS
+                score → score - 5
+            FINSI
+        FINSI
+    FINPOUR
+    droite
+    avancer
+    score → score + 10
+    droite
+    POUR cpt ALLANT DE 1 À 3 PAR PAS DE 1 FAIRE
+        avancer
+        SI mangerPomme ALORS
+            score → score + 10
+        SINON
+            SI marcherSurPiques ALORS
+                score → score - 5
+            FINSI
+        FINSI
+    FINPOUR
+FIN
+
+/*********** Avec boucle, test & fonction ***********/
+
+PROCÉDURE séquence
+DÉBUT
+    POUR cpt ALLANT DE 1 À 3 PAR PAS DE 1 FAIRE
+        avancer
+        SI mangerPomme ALORS
+            score → score + 10
+        SINON
+            SI marcherSurPiques ALORS
+                score → score - 5
+            FINSI
+        FINSI
+    FINPOUR
+FIN
+
+ALGORITHME exercice10
+VARIABLE
+    score : ENTIER
+DÉBUT
+    score → 15
+    séquence
+    droite
+    avancer
+    score → score + 10
+    droite
+    séquence
+FIN
