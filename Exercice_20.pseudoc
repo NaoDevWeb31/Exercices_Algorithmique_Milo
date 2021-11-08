@@ -1,0 +1,15 @@
+/****************************************** EXERCICE 20 *******************************************/
+
+ALGORITHME exercice20
+DÉBUT
+    POUR cpt ALLANT DE 3 À 1 PAR PAS DE -1 FAIRE
+        AFFICHER cpt
+        attendre(1)
+    FINPOUR
+
+    AFFICHER "GO"
+    
+    POUR cpt ALLANT DE 1 À 4 PAR PAS DE 1 FAIRE
+        avancer
+    FINPOUR
+FIN
