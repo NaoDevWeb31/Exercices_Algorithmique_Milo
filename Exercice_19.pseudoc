@@ -1,0 +1,108 @@
+/****************************************** EXERCICE 19 *******************************************/
+
+/*********** Avec test & boucles ***********/
+
+ALGORITHME exercice19
+VARIABLES
+    pv : ENTIER
+    score : ENTIER
+    msg : CHAINE DE CARACTERE
+DÉBUT
+    pv → 1
+    score → 0
+    msg → ""
+
+    POUR cpt ALLANT DE 1 À 3 PAR PAS DE 1 FAIRE
+        avancer
+        SI marcherSurCoeur ALORS
+            pv → pv + 1
+        FINSI
+        SI mangerPomme ALORS
+            score → score + 10
+        FINSI
+        SI ramasserLettre ALORS
+            msg → msg + "A"
+        FINSI
+        SI marcherSurPiques ALORS
+            score → score - 5
+            pv → pv - 1
+        FINSI
+    FINPOUR
+    gauche
+    POUR cpt ALLANT DE 1 À 3 PAR PAS DE 1 FAIRE
+        avancer
+        SI marcherSurCoeur ALORS
+            pv → pv + 1
+        FINSI
+        SI mangerPomme ALORS
+            score → score + 10
+        FINSI
+        SI ramasserLettre ALORS
+            msg → msg + "A"
+        FINSI
+        SI marcherSurPiques ALORS
+            score → score - 5
+            pv → pv - 1
+        FINSI
+    FINPOUR
+
+    AFFICHER "score : ", score, " - pv : ", pv, " - message : ", msg
+FIN
+
+/*********** Avec test, boucle & fonction ***********/
+
+FONCTION ligneDroite()
+VARIABLES
+    localPv : ENTIER
+    localScore : ENTIER
+    localMsg : CHAINE DE CARACTERE
+DÉBUT
+    localPv → 0
+    localScore → 0
+    localMsg → ""
+
+    POUR cpt ALLANT DE 1 À 3 PAR PAS DE 1 FAIRE
+        avancer
+        SI marcherSurCoeur ALORS
+            localPv → pv + 1
+        FINSI
+        SI mangerPomme ALORS
+            localScore → localScore + 10
+        FINSI
+        SI ramasserLettre ALORS
+            localMsg → localMsg + "A"
+        FINSI
+        SI marcherSurPiques ALORS
+            localScore → localScore - 5
+            localPv → localPv - 1
+        FINSI
+    FINPOUR
+
+    RETOURNER [chaine(localPv), chaine(localScore), localMsg] // chaine() => Convertir en chaine de caractère
+FIN
+
+ALGORITHME exercice19
+VARIABLES
+    pv : ENTIER
+    score : ENTIER
+    msg : CHAINE DE CARACTERE
+    tab : TABLEAU CHAINE DE CARACTERE
+DÉBUT
+    pv → 1
+    score → 0
+    msg → ""
+    
+    tab → ligneDroite()
+    pv → pv + entier(tab[0])  // entier() => Convertir en entier
+    score → score + entier(tab[1])
+    msg → msg + tab[2]
+
+    gauche
+
+    tab → ligneDroite()
+    pv → pv + entier(tab[0])
+    score → score + entier(tab[1])
+    msg → msg + tab[2]
+
+    AFFICHER "score : ", score, " - pv : ", pv, " - message : ", msg
+FIN
