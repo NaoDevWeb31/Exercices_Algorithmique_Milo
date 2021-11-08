@@ -1,0 +1,40 @@
+/****************************************** EXERCICE 8 *******************************************/
+
+/*********** Sans boucle ***********/
+
+ALGORITHME exercice8
+VARIABLE
+    score : ENTIER
+DÉBUT
+    score → 0
+    droite
+    droite
+    avancer
+    score → score + 10
+    avancer
+    score → score + 10
+    avancer
+    score → score - 5
+    avancer
+FIN
+
+/*********** Avec boucle & test ***********/
+
+ALGORITHME exercice8
+VARIABLE
+    score : ENTIER
+DÉBUT
+    score → 0
+    droite
+    droite
+    POUR cpt ALLANT DE 1 À 4 PAR PAS DE 1 FAIRE
+        avancer
+        SI mangerPomme ALORS
+            score → score + 10
+        SINON
+            SI marcherSurPiques ALORS
+                score → score - 5
+            FINSI
+        FINSI
+    FINPOUR
+FIN
