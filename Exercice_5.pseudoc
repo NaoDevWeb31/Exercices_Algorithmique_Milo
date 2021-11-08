@@ -1,0 +1,17 @@
+/****************************************** EXERCICE 5 *******************************************/
+
+ALGORITHME exercice5
+VARIABLE
+    score : ENTIER
+DÉBUT
+    score → 0
+    avancer
+    score → score - 5
+    gauche
+    avancer
+    score → score + 10
+    avancer
+    score → score - 5
+    droite
+    avancer
+FIN
