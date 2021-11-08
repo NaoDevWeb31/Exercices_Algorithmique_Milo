@@ -1,0 +1,90 @@
+/****************************************** EXERCICE 23 *******************************************/
+
+/*********** Sans fonction ***********/
+
+ALGORITHME exercice23
+VARIABLES
+    pv : ENTIER
+DÉBUT
+    pv → 3
+    POUR cpt ALLANT DE 1 À 3 PAR PAS DE 1 FAIRE
+        avancer
+
+        SI marcherSurCoeur ALORS
+            pv → pv + 1
+        FINSI
+
+        POUR x ALLANT DE cpt À 1 PAR PAS DE -1 FAIRE
+            AFFICHER cpt
+            attendre(1)
+        FINPOUR
+
+        gauche
+        avancer
+
+        SI marcherSurPiques ALORS
+            pv → pv - 1
+        FINSI
+        
+        droite
+    FINPOUR
+FIN
+
+/*********** Avec fonctions ***********/
+
+FONCTION gererPv(vie)
+VARIABLE
+    localPv : ENTIER
+DÉBUT
+    localPv → vie
+
+    SI marcherSurCoeur ALORS
+        localPv → localPv + 1
+    SINON
+        SI marcherSurPiques ALORS
+            localPv → localPv - 1
+        FINSI
+    FINSI
+
+    RETOURNER localPv
+FIN
+
+PROCEDURE attendreEtDecompter(secondes)
+DÉBUT
+    POUR cpt ALLANT DE secondes À 1 PAR PAS DE -2 FAIRE
+        AFFICHER cpt
+        attendre(1)
+    FINPOUR
+FIN
+
+FONCTION séquence(vie, timer)
+VARIABLE
+    localPv : ENTIER
+DÉBUT
+    localPv → vie
+
+    avancer
+
+    localPv → gererPv(localPv)
+
+    attendreEtDecompter(timer)
+
+    gauche
+    avancer
+
+    localPv → gererPv(localPv)
+        
+    droite
+
+    RETOURNER localPv
+FIN
+
+ALGORITHME exercice23
+VARIABLES
+    pv : ENTIER
+DÉBUT
+    pv → 1
+    POUR cpt ALLANT DE 3 À 1 PAR PAS DE -1 FAIRE
+        pv → séquence(pv, cpt)
+    FINPOUR
+FIN
