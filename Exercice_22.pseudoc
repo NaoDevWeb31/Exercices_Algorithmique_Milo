@@ -1,0 +1,67 @@
+/****************************************** EXERCICE 22 *******************************************/
+
+/*********** Sans fonction ***********/
+
+ALGORITHME exercice22
+VARIABLES
+    pv : ENTIER
+DÉBUT
+    pv → 1
+    POUR cpt ALLANT DE 1 À 2 PAR PAS DE 1 FAIRE
+        avancer
+        SI (pv < 3)
+            pv → pv + 1
+        SINON
+            AFFICHER "pv MAX atteint"
+        FINSI
+        POUR x ALLANT DE 2 À 1 PAR PAS DE -1 FAIRE
+            AFFICHER x
+            attendre(1)
+        FINPOUR
+    FINPOUR
+
+    droite
+    avancer
+
+    SI (pv < 3)
+        pv → pv + 1
+    SINON
+        AFFICHER "pv MAX atteint"
+    FINSI
+    
+    avancer
+FIN
+
+/*********** Avec fonction ***********/
+
+FONCTION gererPv(vie)
+DÉBUT
+    SI (vie < 3)
+        RETOURNER 1
+    SINON
+        AFFICHER "pv MAX atteint"
+        RETOURNER 0
+    FINSI
+FIN
+
+ALGORITHME exercice22
+VARIABLES
+    pv : ENTIER
+DÉBUT
+    pv → 1
+    POUR cpt ALLANT DE 1 À 2 PAR PAS DE 1 FAIRE
+        avancer
+        pv → pv + gererPv(pv)
+        POUR x ALLANT DE 2 À 1 PAR PAS DE -1 FAIRE
+            AFFICHER x
+            attendre(1)
+        FINPOUR
+    FINPOUR
+
+    droite
+    avancer
+
+    pv → pv + gererPv(pv)
+    
+    avancer
+FIN
