@@ -1,0 +1,15 @@
+/****************************************** EXERCICE 4 *******************************************/
+
+ALGORITHME exercice4
+VARIABLE
+    score : ENTIER
+DÉBUT
+    score → 15
+    avancer
+    score → score - 5
+    gauche
+    avancer
+    score → score - 5
+    droite
+    avancer
+FIN
