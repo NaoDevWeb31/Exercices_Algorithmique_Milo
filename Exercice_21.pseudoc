@@ -1,0 +1,42 @@
+/****************************************** EXERCICE 21 *******************************************/
+
+/*********** Avec modulo & boucle ***********/
+
+ALGORITHME exercice21
+DÉBUT
+    avancer
+    POUR cpt ALLANT DE 6 À 1 PAR PAS DE -1 FAIRE
+        SI (cpt mod 2 = 0) ALORS
+            AFFICHER cpt
+        FINSI
+        attendre(1)
+    FINPOUR
+    droite
+    avancer
+    POUR cpt ALLANT DE 4 À 1 PAR PAS DE -1 FAIRE
+        SI (cpt mod 2 = 0) ALORS
+            AFFICHER cpt
+        FINSI
+        attendre(1)
+    gauche
+    avancer
+FIN
+
+/*********** Avec boucle ***********/
+
+ALGORITHME exercice21
+DÉBUT
+    avancer
+    POUR cpt ALLANT DE 6 À 1 PAR PAS DE -2 FAIRE
+        AFFICHER cpt
+        attendre(2)
+    FINPOUR
+    droite
+    avancer
+    POUR cpt ALLANT DE 4 À 1 PAR PAS DE -2 FAIRE
+        AFFICHER cpt
+        attendre(2)
+    FINPOUR
+    gauche
+    avancer
+FIN
