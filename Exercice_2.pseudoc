@@ -1,0 +1,13 @@
+/****************************************** EXERCICE 2 *******************************************/
+
+ALGORITHME exercice2
+VARIABLE
+    score : ENTIER
+DÉBUT
+    score → 0
+    gauche
+    avancer
+    score → score + 10
+    gauche
+    avancer
+FIN
