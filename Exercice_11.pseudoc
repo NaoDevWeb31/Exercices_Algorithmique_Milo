@@ -1,0 +1,18 @@
+/****************************************** EXERCICE 11 *******************************************/
+
+ALGORITHME exercice11
+VARIABLE
+    msg : CHAINE DE CARACTERE
+DÉBUT
+    msg → ""
+    avancer
+    msg → msg + "S"
+    gauche
+    avancer
+    msg → msg + "0"
+    avancer
+    msg → msg + "S"
+    gauche
+    avancer
+    AFFICHER msg
+FIN
