@@ -1,0 +1,9 @@
+/****************************************** EXERCICE 1 *******************************************/
+
+ALGORITHME exercice1
+DÉBUT
+    droite
+    avancer
+    gauche
+    avancer
+FIN
