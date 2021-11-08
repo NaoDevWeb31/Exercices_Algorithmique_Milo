@@ -1,0 +1,21 @@
+/****************************************** EXERCICE 17 *******************************************/
+
+ALGORITHME exercice17
+VARIABLES
+    pv : ENTIER
+DÉBUT
+    pv → 1
+    avancer
+    pv → pv + 1
+    droite
+    POUR cpt ALLANT DE 1 À 3 PAR PAS DE 1 FAIRE
+        avancer
+        SI (pv < 3)
+            pv → pv + 1
+        SINON
+            AFFICHER "pv MAX atteint"
+        FINSI
+    FINPOUR
+    droite
+    avancer
+FIN
