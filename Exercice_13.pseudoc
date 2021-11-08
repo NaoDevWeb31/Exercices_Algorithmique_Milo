@@ -1,0 +1,17 @@
+/****************************************** EXERCICE 13 *******************************************/
+
+ALGORITHME exercice13
+VARIABLE
+    msg : CHAINE DE CARACTERE
+DÉBUT
+    msg → "!!!"
+    POUR cpt ALLANT DE 1 À 4 PAR PAS DE 1 FAIRE
+        avancer
+        msg → "A" + msg
+        AFFICHER msg
+    FINPOUR
+    gauche
+    avancer
+    msg → "H" + msg
+    AFFICHER msg
+FIN
