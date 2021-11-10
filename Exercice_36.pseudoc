@@ -1,0 +1,55 @@
+/****************************************** EXERCICE 36 *******************************************/
+
+/*********** Sans fonction ***********/
+
+ALGORITHME exercice36
+VARIABLE
+    alea : ENTIER 
+DÉBUT
+    avancer
+
+    FAIRE
+        AFFICHER "génération d'un nombre aléatoire"
+        alea → aleatoire(0,20)
+    TANT QUE (alea <= 5 ET alea >= 15)
+
+    droite
+    avancer
+    gauche
+    avancer
+
+    FAIRE
+        AFFICHER "génération d'un nombre aléatoire"
+        alea → aleatoire(0,20)
+    TANT QUE (alea <= 5 ET alea >= 15)
+
+    gauche
+    avancer
+FIN
+
+/*********** Avec fonction ***********/
+
+FONCTION porteJaune
+VARIABLE
+    alea : ENTIER
+DÉBUT
+    FAIRE
+        AFFICHER "génération d'un nombre aléatoire"
+        alea → aleatoire(0,20)
+    TANT QUE (alea <= 5 ET alea >= 15)
+FIN
+
+ALGORITHME exercice36
+DÉBUT
+    avancer
+    porteJaune
+
+    droite
+    avancer
+    gauche
+    avancer
+    porteJaune
+    
+    gauche
+    avancer
+FIN
