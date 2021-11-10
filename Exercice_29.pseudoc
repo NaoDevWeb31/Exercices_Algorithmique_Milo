@@ -1,0 +1,16 @@
+/****************************************** EXERCICE 29 *******************************************/
+
+ALGORITHME exercice29
+DÉBUT
+    TANT QUE (pasDeMur) FAIRE
+        avancer
+    FINTANTQUE
+
+    gauche
+    avancer
+    gauche
+
+    TANT QUE (pasDeDrapeau) FAIRE
+        avancer
+    FINTANTQUE
+FIN
