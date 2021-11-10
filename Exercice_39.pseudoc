@@ -1,0 +1,42 @@
+/****************************************** EXERCICE 39 *******************************************/
+
+PROCEDURE parcours1
+DÉBUT
+    avancer
+FIN
+
+PROCEDURE parcours2
+DÉBUT
+    droite
+    droite
+    avancer
+FIN
+
+PROCEDURE parcours3
+DÉBUT
+    droite
+    avancer
+FIN
+
+PROCEDURE parcours4
+DÉBUT
+    gauche
+    avancer
+FIN
+
+ALGORITHME exercice39
+VARIABLE
+    alea : ENTIER
+DÉBUT
+    avancer
+    alea → aleatoire(1,4)
+    avancer
+    suiteParcours
+    SELON alea
+        CAS 1 : parcours1
+        CAS 2 : parcours2
+        CAS 3 : parcours3
+        CAS 4 : parcours4
+        AUTREMENT : AFFICHER "Cas non pris en compte"
+    FINSELON
+FIN
