@@ -1,0 +1,68 @@
+/****************************************** EXERCICE 32 *******************************************/
+
+FONCTION ajoutPv(pv)
+DÉBUT
+    SI (pv < 3) ALORS
+        RETOURNER pv + 1
+    SINON
+        AFFICHER "pv MAX atteint"
+        RETOURNER 3
+    FINSI
+FIN
+
+FONCTION ligneDroite(pv, score)
+VARIABLES
+    localPv : ENTIER
+    localScore : ENTIER
+DÉBUT
+    localPv → pv
+    localScore → score
+
+    TANT QUE (pasDeMur) FAIRE
+        avancer
+        SI (marcheSurCoeur) ALORS
+            localPv → ajoutPv(localPv)
+        FINSI
+        SI (mangePomme) ALORS
+            localScore → localScore + 10
+        FINSI
+        SI (marcheSurPiques) ALORS
+            localPv → localPv - 1
+            localScore → localScore - 5
+        FINSI
+    FINTANTQUE
+
+    RETOURNER [localPv, localScore]
+FIN
+
+ALGORITHME exercice32
+VARIABLES
+    pv : ENTIER
+    score : ENTIER
+    tab : TABLEAU ENTIER
+DÉBUT
+    pv → 1
+    score → 0
+
+    tab → ligneDroite(pv, score)
+    pv → tab[0]
+    score → score + tab[1]
+
+    droite
+    
+    tab → ligneDroite(pv, score)
+    pv → tab[0]
+    score → score + tab[1]
+
+    gauche
+
+    tab → ligneDroite(pv, score)
+    pv → tab[0]
+    score → score + tab[1]
+
+    gauche
+
+    tab → ligneDroite(pv, score)
+    pv → tab[0]
+    score → score + tab[1]
+FIN
