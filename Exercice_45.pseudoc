@@ -1,0 +1,75 @@
+/****************************************** EXERCICE 45 *******************************************/
+
+ALGORITHME exercice45
+VARIABLE
+    tab[n] : TABLEAU ENTIER
+DÉBUT
+    tab[0] → 10
+    tab[1] → 2
+
+    POUR cpt ALLANT DE 1 À 2 PAR PAS DE 1 FAIRE
+        tab[0] → tab[0] + 10
+    FINPOUR
+    
+    gauche
+    avancer
+    tab[1] → tab[1] + 1
+    gauche
+    avancer
+    tab[0] → tab[0] - 5
+    tab[1] → tab[1] - 1
+    avancer
+FIN
+
+/*********** Optimisation ***********/
+
+FONCTION gererScore()
+DÉBUT
+    SI (mangePomme) ALORS
+        RETOURNER 10
+    SINON
+        SI (marcheSurPiques) ALORS
+            RETOURNER -5
+        SINON
+            RETOURNER 0
+        FINSI
+    FINSI
+FIN
+
+FONCTION gererPv(pv)
+VARIABLE
+    localPv : ENTIER
+DÉBUT
+    localPv → pv
+
+    SI (marcheSurCoeur) ALORS
+        localPv → localPv + 1
+    SINON
+        SI (marcheSurPiques) ALORS
+            localPv → localPv - 1
+        FINSI
+    FINSI
+
+    RETOURNER localPv
+FIN
+
+ALGORITHME exercice45
+VARIABLE
+    tab[n] : TABLEAU ENTIER
+DÉBUT
+    tab[0] → 10
+    tab[1] → 2
+
+    POUR cpt ALLANT DE 1 À 2 PAR PAS DE 1 FAIRE
+        tab[0] → tab[0] + gererScore()
+    FINPOUR
+    
+    gauche
+    avancer
+    tab[1] → gererPv(tab[1])
+    gauche
+    avancer
+    tab[0] → tab[0] + gererScore()
+    tab[1] → gererPv(tab[1])
+    avancer
+FIN
