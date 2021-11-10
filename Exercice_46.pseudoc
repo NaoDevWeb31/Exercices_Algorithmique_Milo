@@ -1,0 +1,28 @@
+/****************************************** EXERCICE 46 *******************************************/
+
+ALGORITHME exercice46
+VARIABLE
+    tab[n] : TABLEAU ENTIER
+    moyenne : ENTIER
+DÉBUT
+    tab → []
+    moyenne → 0
+
+    avancer
+    tab[0] → 10
+    gauche
+    avancer
+    tab[1] → 8
+    avancer
+    tab[2] → 12
+    avancer
+    tab[3] → 6
+    avancer
+
+    POUR cpt ALLANT DE 0 À taille(tab)-1 PAR PAS DE 1 FAIRE
+        moyenne → moyenne + tab[cpt]
+    FINPOUR
+
+    moyenne → moyenne / taille(tab)
+    AFFICHER "La moyenne est de : ", moyenne
+FIN
