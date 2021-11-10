@@ -1,0 +1,34 @@
+/****************************************** EXERCICE 48 *******************************************/
+
+FONCTION calculerMoyenne(tab)
+VARIABLE
+    moyenne : ENTIER
+DÉBUT
+    moyenne → 0
+
+    POUR cpt ALLANT DE 0 À taille(tab)-1 PAR PAS DE 1 FAIRE
+        moyenne → moyenne + tab[cpt]
+    FINPOUR
+
+    RETOURNER moyenne / taille(tab)
+FIN
+
+ALGORITHME exercice48
+VARIABLE
+    tabValeurs[n] : TABLEAU ENTIER
+DÉBUT
+    tabValeurs → []
+
+    avancer
+    tabValeurs[0] → aleatoire(0,20)
+    droite
+
+    POUR cpt ALLANT DE 1 À 3 PAR PAS DE 1 FAIRE
+        avancer
+        tabValeurs[cpt] → aleatoire(0,20)
+    FINPOUR
+
+    droite
+    avancer
+
+    AFFICHER "La moyenne est de : ", calculerMoyenne(tabValeurs)
