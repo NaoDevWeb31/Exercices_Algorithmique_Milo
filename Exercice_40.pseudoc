@@ -1,0 +1,98 @@
+/****************************************** EXERCICE 40 *******************************************/
+
+PROCEDURE parcours1(pts)
+VARIABLE
+    score : ENTIER
+DÉBUT
+    score → pts
+
+    gauche
+    avancer
+    score → score - 5
+    droite
+    avancer
+FIN
+
+PROCEDURE parcours2(pts)
+VARIABLE
+    score : ENTIER
+DÉBUT
+    score → pts
+
+    droite
+    droite
+    avancer
+    score → score + 10
+    gauche
+    avancer
+FIN
+
+PROCEDURE parcours3(pts)
+VARIABLE
+    score : ENTIER
+DÉBUT
+    score → pts
+
+    avancer
+    score → score + 10
+    gauche
+    avancer
+FIN
+
+PROCEDURE parcours4(pts)
+VARIABLE
+    score : ENTIER
+DÉBUT
+    score → pts
+    
+    droite
+    avancer
+    score → score - 5
+    droite
+    avancer
+FIN
+
+PROCEDURE parcours5(pts)
+VARIABLE
+    score : ENTIER
+DÉBUT
+    score → pts
+
+    avancer
+    score → score - 5
+    droite
+    avancer
+FIN
+
+PROCEDURE parcours6(pts)
+VARIABLE
+    score : ENTIER
+DÉBUT
+    score → pts
+
+    gauche
+    avancer
+    score → score + 10
+    droite
+    avancer
+FIN
+
+ALGORITHME exercice40
+VARIABLE
+    alea : ENTIER
+    score : ENTIER
+DÉBUT
+    score → 10
+    avancer
+    alea → aleatoire(1,6)
+    suiteParcours
+    SELON alea
+        CAS 1 : parcours1(score)
+        CAS 2 : parcours2(score)
+        CAS 3 : parcours3(score)
+        CAS 4 : parcours4(score)
+        CAS 5 : parcours5(score)
+        CAS 6 : parcours6(score)
+        AUTREMENT : AFFICHER "Cas non pris en compte"
+    FINSELON
+FIN
