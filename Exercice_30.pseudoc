@@ -1,0 +1,25 @@
+/****************************************** EXERCICE 30 *******************************************/
+
+ALGORITHME exercice30
+VARIABLE
+    pv : ENTIER
+DÉBUT
+    pv → 1
+
+    avancer
+    gauche
+
+    TANT QUE (pasDeMur) FAIRE
+        avancer
+        SI (marcheSurCoeur ET pv < 3) ALORS
+            pv → pv + 1
+        SINON
+            SI (marcheSurCoeur ET pv >= 3) ALORS
+                AFFICHER "pv MAX atteint"
+            FINSI
+        FINSI
+    FINTANTQUE
+
+    droite
+    avancer
+FIN
