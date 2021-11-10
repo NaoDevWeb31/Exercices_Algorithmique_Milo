@@ -1,0 +1,49 @@
+/****************************************** EXERCICE 50 *******************************************/
+
+FONCTION saisirValeur()
+VARIABLE
+    nombre : ENTIER
+DÉBUT
+    AFFICHER "Saisissez un nombre : "
+    SAISIR nombre
+    RETOURNER nombre
+FIN
+
+FONCTION calculerMoyenne(tab)
+VARIABLE
+    moyenne : ENTIER
+DÉBUT
+    moyenne → 0
+
+    POUR cpt ALLANT DE 0 À taille(tab)-1 PAR PAS DE 1 FAIRE
+        moyenne → moyenne + tab[cpt]
+    FINPOUR
+
+    RETOURNER moyenne / taille(tab)
+FIN
+
+ALGORITHME exercice50
+VARIABLE
+    tabValeurs[n] : TABLEAU ENTIER
+DÉBUT
+    tabValeurs → []
+
+    avancer
+    tabValeurs[0] → saisirValeur()
+
+    droite
+    avancer
+    tabValeurs[1] → saisirValeur()
+
+    droite
+    avancer
+    tabValeurs[2] → saisirValeur()
+
+    gauche
+    avancer
+    tabValeurs[3] → saisirValeur()
+
+    droite
+    avancer
+    AFFICHER "La moyenne est de : ", calculerMoyenne(tabValeurs)
+FIN
