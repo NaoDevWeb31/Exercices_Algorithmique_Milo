@@ -1,0 +1,45 @@
+/****************************************** EXERCICE 38 *******************************************/
+
+PROCEDURE sequence17ans
+DÉBUT
+    gauche
+    avancer
+    droite
+    avancer
+    avancer
+    droite
+    avancer
+FIN
+
+PROCEDURE sequence18ans
+DÉBUT
+    POUR cpt ALLANT DE 1 À 2 PAR PAS DE 1 FAIRE
+        avancer
+    FINPOUR
+FIN
+
+PROCEDURE sequence19et20ans
+DÉBUT
+    droite
+    avancer
+    gauche
+    avancer
+    avancer
+    gauche
+    avancer
+FIN
+
+ALGORITHME exercice38
+VARIABLES
+    age : ENTIER
+DÉBUT
+    SAISIR age
+    avancer
+    SELON age
+        CAS 17 : sequence17ans
+        CAS 18 : sequence18ans
+        CAS 19 : sequence19et20ans
+        CAS 20 : sequence19et20ans
+        AUTREMENT : AFFICHER "Cas non pris en compte"
+    FINSELON
+FIN
