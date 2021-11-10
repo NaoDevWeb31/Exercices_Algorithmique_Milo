@@ -1,0 +1,50 @@
+/****************************************** EXERCICE 42 *******************************************/
+
+FONCTION parcoursImpair
+VARIABLE
+    score : ENTIER
+DÉBUT
+    score → 0
+
+    avancer
+    score → score + 10
+    avancer
+    
+    RETOURNER score
+FIN
+
+FONCTION parcoursPaire
+VARIABLE
+    score : ENTIER
+DÉBUT
+    score → 0
+
+    avancer
+    score → score - 5
+    avancer
+
+    RETOURNER score
+FIN
+
+ALGORITHME exercice42
+VARIABLES
+    alea : ENTIER
+    score : ENTIER
+DÉBUT
+    score → 0
+
+    avancer
+    alea → aleatoire(1,20)
+    avancer
+    suiteParcours
+
+    SI (alea mod 2 = 0) ALORS
+        score → score + parcoursPair
+    SINON
+        score → score + parcoursImpair
+    FINSI
+
+    retourParcours
+    avancer
+    AFFICHER "Mon score est : ", score
+FIN
