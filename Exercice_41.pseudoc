@@ -1,0 +1,109 @@
+/****************************************** EXERCICE 41 *******************************************/
+
+PROCEDURE parcours1(pts)
+VARIABLE
+    score : ENTIER
+DÉBUT
+    score → pts
+
+    avancer
+    score → score + 10
+    droite
+    avancer
+FIN
+
+PROCEDURE parcours2(pts)
+VARIABLE
+    score : ENTIER
+DÉBUT
+    score → pts
+
+    avancer
+    score → score + 20
+    droite
+    avancer
+FIN
+
+PROCEDURE parcours3(pts)
+VARIABLE
+    score : ENTIER
+DÉBUT
+    score → pts
+
+    avancer
+    score → score - 5
+    droite
+    avancer
+FIN
+
+ALGORITHME exercice41
+VARIABLES
+    alea : ENTIER
+    score : ENTIER
+DÉBUT
+    score → 0
+
+    avancer
+
+    FAIRE
+        alea → aleatoire(1,20)
+    TANT QUE (alea >= 18)
+
+    avancer
+    suiteParcours
+
+    SI (alea < 6) ALORS
+        parcours1(score)
+    SINON
+        SI (alea < 12) ALORS
+            parcours2(score)
+        SINON
+            SI (alea < 18) ALORS
+                parcours3(score)
+            FINSI
+        FINSI
+    FINSI
+FIN
+
+/*********** Optimisation ***********/
+
+PROCEDURE parcours(points, ajout)
+VARIABLE
+    score : ENTIER
+DÉBUT
+    score → points
+
+    avancer
+    score → score + ajout
+    droite
+    avancer
+FIN
+
+ALGORITHME exercice41
+VARIABLES
+    alea : ENTIER
+    score : ENTIER
+DÉBUT
+    score → 0
+
+    avancer
+
+    FAIRE
+        alea → aleatoire(1,20)
+    TANT QUE (alea >= 18)
+
+    avancer
+    suiteParcours
+
+    SI (alea < 6) ALORS
+        parcours(score, 10)
+    SINON
+        SI (alea < 12) ALORS
+            parcours(score, 20)
+        SINON
+            SI (alea < 18) ALORS
+                parcours(score, -5)
+            FINSI
+        FINSI
+    FINSI
+FIN
