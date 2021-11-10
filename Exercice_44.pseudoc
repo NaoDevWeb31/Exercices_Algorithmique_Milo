@@ -1,0 +1,51 @@
+/****************************************** EXERCICE 44 *******************************************/
+
+ALGORITHME exercice44
+VARIABLE
+    tab[n] : TABLEAU ENTIER
+DÉBUT
+    tab → [0, 1]
+
+    avancer
+    tab[0] → tab[0] + 10
+    tab[1] → tab[1] + 1
+    avancer
+
+    avancer
+    tab[0] → tab[0] - 5
+    tab[1] → tab[1] - 1
+
+    avancer
+    tab[0] → tab[0] + 10
+    tab[1] → tab[1] + 1
+    
+    avancer
+    AFFICHER "Score : ", tab[0]
+    AFFICHER "PV : ", tab[1]
+FIN
+
+/*********** Optimisation ***********/
+
+ALGORITHME exercice44
+VARIABLE
+    tab[n] : TABLEAU ENTIER
+DÉBUT
+    tab → [0, 1]
+
+    POUR cpt ALLANT DE 1 À 4 PAR PAS DE 1 FAIRE
+        avancer
+        SI (mangePomme) ALORS
+            tab[0] → tab[0] + 10
+        FINSI
+        SI (marcheSurCoeur) ALORS
+            tab[1] → tab[1] + 1
+        FINSI
+        SI (marcheSurPiques) ALORS
+            tab[0] → tab[0] - 5
+            tab[1] → tab[1] - 1
+        FINSI
+    FINPOUR
+
+    AFFICHER "Score : ", tab[0]
+    AFFICHER "PV : ", tab[1]
+FIN
