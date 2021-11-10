@@ -1,0 +1,60 @@
+/****************************************** EXERCICE 33 *******************************************/
+
+FONCTION ajoutPv(pv)
+DÉBUT
+    SI (pv < 3) ALORS
+        RETOURNER pv + 1
+    SINON
+        AFFICHER "pv MAX atteint"
+        RETOURNER 3
+    FINSI
+FIN
+
+ALGORITHME exercice33
+VARIABLES
+    pv : ENTIER
+    score : ENTIER
+DÉBUT
+    pv → 1
+    score → 0
+
+    POUR cpt ALLANT DE 1 À 2 PAR PAS DE 1 FAIRE
+        avancer
+        droite
+    FINPOUR
+
+    POUR cpt ALLANT DE 1 À 2 PAR PAS DE 1 FAIRE
+        avancer
+    FINPOUR
+
+    droite
+    
+    TANT QUE (pasDeMur) FAIRE
+        avancer
+        SI (marcheSurCoeur) ALORS
+            pv → ajoutPv(pv)
+        FINSI
+        SI (marcheSurPiques) ALORS
+            pv → pv - 1
+            score → score - 5
+        FINSI
+    FINTANTQUE
+
+    droite
+
+    POUR cpt ALLANT DE 1 À 3 PAR PAS DE 1 FAIRE
+        avancer
+        SI (mangePomme) ALORS
+            score → score + 10
+        FINSI
+    FINPOUR
+
+    droite
+
+    TANT QUE (pasDeMur) FAIRE
+        avancer
+        SI (mangePomme) ALORS
+            score → score + 10
+        FINSI
+    FINTANTQUE
+FIN
