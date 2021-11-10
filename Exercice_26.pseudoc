@@ -1,0 +1,96 @@
+/****************************************** EXERCICE 26 *******************************************/
+
+/*********** Sans fonction ***********/
+
+ALGORITHME exercice26
+VARIABLE
+    petit : BOOLEEN 
+DÉBUT
+    petit → FAUX
+
+    avancer
+    AFFICHER "taille MAX"
+    avancer
+    petit → VRAI
+    avancer
+    AFFICHER "aïe"
+    gauche
+    avancer
+    petit → FAUX
+    avancer
+FIN
+
+/*********** Avec fonction ***********/
+
+FONCTION testTete(taille)
+DÉBUT
+    SI (NON taille) ALORS
+        AFFICHER "taille MAX"
+    FINSI
+
+    RETOURNER FAUX
+FIN
+
+FONCTION testCaisse(taille)
+DÉBUT
+    SI (taille) ALORS
+        AFFICHER "aïe"
+    FINSI
+
+    RETOURNER VRAI
+FIN
+
+FONCTION gererTaille(taille)
+DÉBUT
+    SI (marcheSurTete) ALORS
+        RETOURNER testTete(taille)
+    SINON
+        SI (marcheSurCaisse) ALORS
+            RETOURNER testCaisse(taille)
+        FINSI
+    FINSI
+FIN
+
+ALGORITHME exercice26
+    petit : BOOLEEN 
+DÉBUT
+    petit → FAUX
+
+    avancer
+    petit → gererTaille(petit)
+    avancer
+    petit → gererTaille(petit)
+    avancer
+    petit → gererTaille(petit)
+    gauche
+    avancer
+    petit → gererTaille(petit)
+    avancer
+FIN
+
+/*********** Avec fonction et boucle ***********/
+
+FONCTION ligneDroite(taille, pas)
+VARIABLE
+    localTaille : BOOLEEN
+DÉBUT
+    localTaille → taille
+
+    POUR cpt ALLANT DE 1 À pas PAR PAS DE 1 FAIRE
+        avancer
+        petit → gererTaille(localTaille)
+    FINPOUR
+
+    RETOURNER localTaille
+FIN
+
+ALGORITHME exercice26
+VARIABLE
+    petit : BOOLEEN 
+DÉBUT
+    petit → FAUX
+
+    petit → ligneDroite(petit, 3)
+    gauche
+    petit → ligneDroite(petit, 2)
+FIN
