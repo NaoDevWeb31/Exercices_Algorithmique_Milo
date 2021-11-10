@@ -1,0 +1,15 @@
+/****************************************** EXERCICE 35 *******************************************/
+
+ALGORITHME exercice35
+VARIABLE
+    alea : ENTIER 
+DÉBUT
+    avancer
+
+    FAIRE
+        AFFICHER "génération d'un nombre aléatoire"
+        alea → aleatoire(0,20)
+    TANT QUE (alea < 5)
+
+    avancer
+FIN
