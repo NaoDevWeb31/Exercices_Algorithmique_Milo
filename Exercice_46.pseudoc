@@ -1,7 +1,7 @@
 /****************************************** EXERCICE 46 *******************************************/
 
 ALGORITHME exercice46
-VARIABLE
+VARIABLES
     tab[n] : TABLEAU ENTIER
     moyenne : ENTIER
 DÉBUT

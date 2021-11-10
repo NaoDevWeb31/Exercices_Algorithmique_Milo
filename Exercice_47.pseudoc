@@ -1,0 +1,40 @@
+/****************************************** EXERCICE 47 *******************************************/
+
+FONCTION faitException(mot)
+VARIABLE
+    exceptions[c] : TABLEAU CHAINE DE CARACTERE
+DÉBUT
+    exceptions → ["hibou", "chou", "genou", "caillou", "bijou", "joujou", "pou"]
+
+    POUR cpt ALLANT DE 0 À taille(exceptions)-1 PAR PAS DE 1 FAIRE
+        SI (exceptions[cpt] = mot) ALORS
+            RETOURNER VRAI
+        FINSI
+    FINPOUR
+
+    RETOURNER FAUX
+FIN
+
+FONCTION pluriel(mot)
+DÉBUT
+    SI (faitException(mot)) ALORS
+        RETOURNER mot + "x"
+    SINON
+        RETOURNER mot + "s"
+    FINSI
+FIN
+
+ALGORITHME exercice47
+DÉBUT
+    avancer
+    AFFICHER pluriel("bijou")
+    avancer
+    AFFICHER pluriel("verrou")
+    droite
+    avancer
+    AFFICHER pluriel("chou")
+    droite
+    avancer
+    AFFICHER pluriel("filou")
+    avancer
+FIN
