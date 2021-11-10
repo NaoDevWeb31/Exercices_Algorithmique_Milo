@@ -1,0 +1,80 @@
+/****************************************** EXERCICE 43 *******************************************/
+
+FONCTION estDivisible3(pv)
+VARIABLES
+    localScore : ENTIER
+    localPv : ENTIER
+DÉBUT
+    localScore → 0
+    localPv → pv
+
+    avancer
+    score → score + 20
+    droite
+    avancer
+
+    SI (pv < 3) ALORS
+        localPv → localPv + 1
+    FINSI
+
+    droite
+    avancer
+    
+    RETOURNER [localScore, localPv]
+FIN
+
+FONCTION pasDivisible3(pv)
+VARIABLES
+    localScore : ENTIER
+    localPv : ENTIER
+DÉBUT
+    localScore → 0
+    localPv → pv
+
+    avancer
+    score → score + 10
+    droite
+    avancer
+    
+    SI (pv < 3) ALORS
+        localPv → localPv + 2
+    SINON
+        localPv → 3
+    FINSI
+
+    droite
+    avancer
+    
+    RETOURNER [localScore, localPv]
+FIN
+
+ALGORITHME exercice43
+VARIABLES
+    alea : ENTIER
+    score : ENTIER
+    pv : ENTIER
+    tab[n] : TABLEAU ENTIER
+DÉBUT
+    score → 0
+    pv → 1
+
+    avancer
+    alea → aleatoire(1,20)
+    avancer
+    suiteParcours
+
+    SI (alea mod 3 = 0) ALORS
+        tab → estDivisible3(pv)
+    SINON
+        tab → pasDivisible3(pv)
+    FINSI
+
+    retourParcours
+    score → score + tab[0]
+    pv → tab[1]
+    
+    gauche
+    gauche
+    avancer
+    AFFICHER "Score : ", score, " - PV : ", pv
+FIN
