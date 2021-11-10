@@ -1,0 +1,69 @@
+/****************************************** EXERCICE 34 *******************************************/
+
+FONCTION gererTaille(taille)
+DÉBUT
+    SI (mangeChampignon) ALORS
+        RETOURNER NON taille
+    SINON
+        SI (marcheSurTete) ALORS
+            SI (taille) ALORS
+                AFFICHER "taille MAX"
+            FINSI
+
+            RETOURNER VRAI
+        SINON
+            SI (marcheSurCaisse) ALORS
+                SI (NON taille) ALORS
+                    AFFICHER "aïe"
+                FINSI
+
+                RETOURNER FAUX
+            FINSI
+        FINSI
+    FINSI
+
+    RETOURNER taille
+FIN
+
+ALGORITHME exercice34
+VARIABLE
+    grand : BOOLEEN 
+DÉBUT
+    grand → VRAI
+
+    POUR cpt ALLANT DE 1 À 3 PAR PAS DE 1 FAIRE
+        avancer
+        grand → gererTaille(grand)
+    FINPOUR
+
+    gauche
+
+    TANT QUE (pasDeMur) FAIRE
+        avancer
+        grand → gererTaille(grand)
+    FINTANTQUE
+
+    gauche
+
+    POUR cpt ALLANT DE 1 À 3 PAR PAS DE 1 FAIRE
+        avancer
+        grand → gererTaille(grand)
+    FINPOUR
+FIN
+
+/*********** Optimisation ***********/
+
+ALGORITHME exercice34
+VARIABLE
+    grand : BOOLEEN 
+DÉBUT
+    grand → VRAI
+
+    POUR cpt ALLANT DE 1 À 3 PAR PAS DE 1 FAIRE
+        TANT QUE (pasDeMur) FAIRE
+            avancer
+            grand → gererTaille(grand)
+        FINTANTQUE
+        gauche
+    FINPOUR
+FIN
