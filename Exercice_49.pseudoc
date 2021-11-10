@@ -1,0 +1,88 @@
+/****************************************** EXERCICE 49 *******************************************/
+
+FONCTION addition(tab)
+VARIABLE
+    resultat : ENTIER
+DÉBUT
+    resultat → 0
+    
+    POUR cpt ALLANT DE 0 À taille(tab)-1 PAR PAS DE 1 FAIRE
+        resultat → resultat + tab[cpt]
+    FINPOUR
+
+    RETOURNER resultat
+FIN
+
+FONCTION soustraction(tab)
+VARIABLE
+    resultat : ENTIER
+DÉBUT
+    resultat → 0
+    
+    POUR cpt ALLANT DE 0 À taille(tab)-1 PAR PAS DE 1 FAIRE
+        resultat → resultat - tab[cpt]
+    FINPOUR
+
+    RETOURNER resultat
+FIN
+
+FONCTION multiplication(tab)
+VARIABLE
+    resultat : ENTIER
+DÉBUT
+    resultat → 0
+
+    POUR cpt ALLANT DE 0 À taille(tab)-1 PAR PAS DE 1 FAIRE
+        resultat → resultat * tab[cpt]
+    FINPOUR
+
+    RETOURNER resultat
+FIN
+
+FONCTION division(tab)
+VARIABLE
+    resultat : ENTIER
+DÉBUT
+    resultat → 0
+
+    POUR cpt ALLANT DE 0 À taille(tab)-1 PAR PAS DE 1 FAIRE
+        resultat → resultat / tab[cpt]
+    FINPOUR
+
+    RETOURNER resultat
+FIN
+
+ALGORITHME exercice49
+VARIABLES
+    tabValeurs[n] : TABLEAU ENTIER
+    actionSaisie : CHAINE DE CARACTERE
+    resultat : ENTIER
+DÉBUT
+    tabValeurs → []
+    resultat → 0
+
+    POUR cpt ALLANT DE 1 À 2 PAR PAS DE 1 FAIRE
+        avancer
+        tabValeurs[cpt] → aleatoire(0,20)
+    FINPOUR
+
+    droite
+    avancer
+    tabValeurs[taile(tabValeurs)] → aleatoire(0,20) // Pour ajouter la valeur à la fin du tableau en créant une nouvelle case
+
+    gauche
+    avancer
+    tabValeurs[taile(tabValeurs)] → aleatoire(0,20)
+
+    AFFICHER "Quel opération souhaitez-vous effectuer ?"
+    SAISIR actionSaisie
+    SELON actionSaisie
+        CAS "+" : addition(tabValeurs)
+        CAS "-" : soustraction(tabValeurs)
+        CAS "*" : multiplication(tabValeurs)
+        CAS "/" : division(tabValeurs)
+        AUTREMENT : AFFICHER "Cas non pris en compte"
+    FINSELON
+
+    AFFICHER "Le résultat est de : ", resultat
+FIN
