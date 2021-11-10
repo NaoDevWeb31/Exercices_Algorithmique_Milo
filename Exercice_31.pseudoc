@@ -1,0 +1,44 @@
+/****************************************** EXERCICE 31 *******************************************/
+
+FONCTION ligneDroite(pv, score)
+VARIABLES
+    localPv : ENTIER
+    localScore : ENTIER
+DÉBUT
+    localPv → pv
+    localScore → score
+
+    TANT QUE (pasDeMur) FAIRE
+        avancer
+        SI (marcheSurCoeur ET localPv < 3) ALORS
+            localPv → localPv + 1
+        FINSI
+        SI (mangePomme) ALORS
+            localScore → localScore + 10
+        FINSI
+    FINTANTQUE
+
+    RETOURNER [localPv, localScore]
+FIN
+
+ALGORITHME exercice31
+VARIABLES
+    pv : ENTIER
+    score : ENTIER
+    tab : TABLEAU ENTIER
+DÉBUT
+    pv → 1
+    score → 20
+
+    tab → ligneDroite(pv, score)
+    pv → tab[0]
+    score → tab[1]
+
+    gauche
+    avancer
+    gauche
+
+    tab → ligneDroite(pv, score)
+    pv → tab[0]
+    score → tab[1]
+FIN
