@@ -78,7 +78,7 @@ DÉBUT
 
     POUR cpt ALLANT DE 1 À pas PAR PAS DE 1 FAIRE
         avancer
-        petit → gererTaille(localTaille)
+        localTaille → gererTaille(localTaille)
     FINPOUR
 
     RETOURNER localTaille

@@ -1,0 +1,113 @@
+/****************************************** EXERCICE 28 *******************************************/
+
+/*********** Sans fonction ***********/
+
+ALGORITHME exercice28
+VARIABLE
+    grand : BOOLEEN 
+DÉBUT
+    grand → VRAI
+
+    avancer
+    grand → NON grand (FAUX)
+    gauche
+    avancer
+    grand → AFFICHER "aïe"
+    gauche
+    avancer
+    grand → VRAI
+    avancer
+    grand → NON grand (FAUX)
+    avancer
+    grand → VRAI
+    gauche
+    avancer
+    grand → AFFICHER "taille MAX"
+    gauche
+    avancer
+FIN
+
+/*********** Avec fonction ***********/
+
+FONCTION gererTaille(taille)
+DÉBUT
+    SI (mangeChampignon) ALORS
+        RETOURNER NON taille
+    SINON
+        SI (marcheSurTete) ALORS
+            SI (taille) ALORS
+                AFFICHER "taille MAX"
+            FINSI
+
+            RETOURNER VRAI
+        SINON
+            SI (marcheSurCaisse) ALORS
+                SI (NON taille) ALORS
+                    AFFICHER "aïe"
+                FINSI
+
+                RETOURNER FAUX
+            FINSI
+        FINSI
+    FINSI
+
+    RETOURNER taille
+FIN
+
+ALGORITHME exercice28
+VARIABLE
+    petit : BOOLEEN 
+DÉBUT
+    grand → VRAI
+
+    avancer
+    grand → gererTaille(grand)
+    gauche
+    avancer
+    grand → gererTaille(grand)
+    gauche
+    avancer
+    grand → gererTaille(grand)
+    avancer
+    grand → gererTaille(grand)
+    avancer
+    grand → gererTaille(grand)
+    gauche
+    avancer
+    grand → gererTaille(grand)
+    gauche
+    avancer
+FIN
+
+/*********** Avec fonction et boucle ***********/
+
+FONCTION sequence(taille, tour)
+VARIABLE
+    localTaille : BOOLEEN
+DÉBUT
+    localTaille → taille
+
+    POUR cpt ALLANT DE 1 À tour PAR PAS DE 1 FAIRE
+        avancer
+        localTaille → gererTaille(localTaille)
+        gauche
+    FINPOUR
+
+    RETOURNER localTaille
+FIN
+
+ALGORITHME exercice28
+VARIABLE
+    grand : BOOLEEN 
+DÉBUT
+    grand → VRAI
+
+    grand → sequence(grand, 2)
+
+    POUR cpt ALLANT DE 1 À 2 PAR PAS DE 1 FAIRE
+        avancer
+        grand → gererTaille(grand)
+    FINPOUR
+
+    grand → sequence(grand, 3)
+FIN
