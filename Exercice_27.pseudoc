@@ -1,0 +1,37 @@
+/****************************************** EXERCICE 27 *******************************************/
+
+/*********** Sans fonction ***********/
+
+ALGORITHME exercice27
+VARIABLE
+    grand : BOOLEEN 
+DÉBUT
+    grand → VRAI
+
+    avancer
+    gauche
+    avancer
+    grand → FAUX
+    avancer
+    avancer
+    grand → VRAI
+    avancer
+FIN
+
+/*********** Avec test et boucle ***********/
+
+ALGORITHME exercice27
+VARIABLE
+    petit : BOOLEEN 
+DÉBUT
+    grand → VRAI
+
+    avancer
+    gauche
+    POUR cpt ALLANT DE 1 À 4 PAR PAS DE 1 FAIRE
+        avancer
+        SI (mangeChampignon) ALORS
+            grand → NON grand
+        FINSI
+    FINPOUR
+FIN
