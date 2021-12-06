@@ -44,4 +44,4 @@ Apprentissage de l'algorithmique, du pseudo-code et création de vos premiers pr
 
 #### Suite du parcours
 
-**Cours #3** ➤ [40 exercices d'algorithmique (pseudo-code et programme)](https://github.com/NaoDevWeb31/Exercices_Algorithmique_Programmation)
+**Cours #3** ➤ [40 exercices d'algorithmique (pseudo-code et programme)](https://github.com/NaoDevWeb31/Exercices_Algorithmique_Programmation "Repository du cours #3")
